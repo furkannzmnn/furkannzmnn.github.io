@@ -22,7 +22,7 @@
 <body>
 <main>
   <h1>Skyline Empire</h1>
-  <p class="meta">Rota Studio · Son güncelleme / Last updated: 11.11.2026</p>
+  <p class="meta">Rota Studio · Son güncelleme / Last updated: 14.11.2026</p>
   <nav><a href="#tr">Türkçe</a><a href="#en">English</a><a href="#destek">Destek / Support</a></nav>
 
   <section id="tr" lang="tr">
@@ -32,7 +32,7 @@
        Ad, e-posta, telefon numarası gibi kimlik bilgileri istemiyoruz.</p>
 
     <h2>Hesap ve oyun verileri</h2>
-    <p>Oyun ilk açılışta sizin için anonim bir oyuncu kimliği oluşturur (Unity Authentication). Bu kimlikle şunlar sunucuda saklanır
+    <p>Oyun, siz bir şey yapmadan sizin için otomatik olarak anonim bir hesap ve oyuncu kimliği oluşturur (Unity Authentication). Bu kimlikle şunlar sunucuda saklanır
        (Unity Cloud Save ve Unity Cloud Code):</p>
     <ul>
       <li><b>Oyun ilerlemesi:</b> oyun içi para, mülkler, binalar ve tasarımları, seviye, görevler, kulüp üyeliği ve oyun içi işlemler.</li>
@@ -41,34 +41,56 @@
       <li><b>Sıralamalar:</b> şirket adınız ve skorlarınız (servet, mülk sayısı gibi) herkese açık sıralamalarda gösterilir (Unity Leaderboards).</li>
     </ul>
     <p>Bu veriler oyunu çalıştırmak için gereklidir (sözleşmenin ifası). Haritanın bir kısmı ve ayarlarınız ayrıca hız için cihazınızda da saklanır.</p>
+    <p>İsterseniz ilerlemenizi korumak için hesabınızı Apple Game Center hesabınıza bağlayabilirsiniz; bu tamamen isteğe bağlıdır.
+       Bağlarsanız Game Center oyuncu kimliğiniz hesabınızla birlikte saklanır.</p>
 
-    <h2>Kullanım ölçümü (isteğe bağlı)</h2>
-    <p>Oyunu iyileştirmek için, yalnızca izin verirseniz, anonim kullanım olayları toplanır (Unity Analytics): oturum süresi, hangi adımlara
-       ulaşıldığı, cihaz modeli ve işletim sistemi sürümü gibi teknik bilgiler. İzni ilk açılışta verebilir ya da reddedebilir,
-       sonradan Profil &gt; Gizlilik bölümünden değiştirebilirsiniz. Reddederseniz ölçüm yapılmaz.</p>
+    <h2>Kullanım ölçümü ve reklam ölçümü</h2>
+    <p><b>Anonim kullanım ölçümü (TelemetryDeck):</b> varsayılan olarak açıktır. Oyunu iyileştirmek için kaba olaylar gönderilir: oturum süresi (aralık olarak),
+       açılan ekranlar, rehber adımları, ilerleme kilometre taşları, satın alma akışının adımları ve ürünün kısa adı, hata türü, cihaz modeli,
+       işletim sistemi sürümü, uygulama sürümü ve cihazın bölge ayarı. Veriler, cihazda üretilen rastgele bir kimliğin özetiyle gönderilir; ad,
+       oyuncu kimliği, reklam kimliği ve konum gönderilmez. IP adresiniz TelemetryDeck sunucularında saklanmaz. Kapatmak için oyunda
+       Ayarlar (dişli) &gt; Gizlilik &gt; &quot;Anonim kullanım verisi&quot; satırını kullanın; kapatınca cihazdaki rastgele kimlik silinir.</p>
+    <p><b>Reklam ölçümü (Meta):</b> kendi reklamlarımızın işe yarayıp yaramadığını ölçmek için uygulama kurulumu, uygulama açılışı ve satın alma
+       olayları (ürün, fiyat, para birimi) ile cihaz ve uygulama bilgisi Meta Platforms'a gönderilir. Reklam kimliğine (IDFA) erişilmez ve oyun
+       izleme izni penceresi göstermez. Avrupa Ekonomik Alanı, Birleşik Krallık ve İsviçre dışında varsayılan olarak açıktır; bu bölgelerde siz açana kadar kapalıdır.
+       Kapatmak (ya da bu bölgelerde açmak) için Ayarlar (dişli) &gt; Gizlilik &gt; &quot;Reklam ölçümü&quot; satırını kullanın.</p>
+    <p><b>Ayrıntılı oyun analizi (Unity Analytics):</b> varsayılan olarak kapalıdır; yalnızca Ayarlar (dişli) &gt; Gizlilik &gt; &quot;Ayrıntılı oyun analizi&quot;
+       satırından siz açarsanız anonim kullanım olayları toplanır.</p>
 
     <h2>Uygulama içi satın almalar</h2>
     <p>Satın almalar Apple (App Store) tarafından işlenir. Kart ya da ödeme bilgilerinizi görmeyiz. Satın aldığınız içeriği hesabınıza
-       tanımlayabilmek için yalnızca işlem kimliği ve ürün bilgisi sunucumuzda doğrulanır ve saklanır.</p>
+       tanımlayabilmek için yalnızca işlem kimliği ve ürün bilgisi sunucumuzda doğrulanır ve saklanır. Satın alma kayıtları, satın aldığınız içeriğin size
+       teslim edilebilmesi için RevenueCat üzerinden de işlenir. Reklam ölçümü açıksa satın alma olayı Meta'ya da gönderilir (yukarıya bakın).</p>
 
     <h2>Reklam ve izleme</h2>
-    <p>Oyunda şu anda reklam yoktur. Uygulama sizi başka uygulama ve sitelerde izlemez ve uygulamalar arası izleme (ATT) izni istemez.</p>
+    <p>Oyunda reklam gösterilmez. Uygulama uygulamalar arası izleme (ATT) izni istemez ve reklam kimliğinize (IDFA) erişmez.
+       Reklam ölçümü için yukarıdaki &quot;Kullanım ölçümü ve reklam ölçümü&quot; bölümüne bakın.</p>
 
     <h2>Bildirimler</h2>
     <p>İzin verirseniz inşaatınız bittiğinde ya da kira kasanız dolduğunda hatırlatmalar cihazınızda planlanır. Bunun için sunucuya veri gönderilmez.</p>
 
     <h2>Hizmet sağlayıcılar ve veri konumu</h2>
-    <p>Sunucu hizmetlerini Unity Technologies (Unity Gaming Services) sağlar. Veriler Unity'nin Avrupa Birliği ve Amerika Birleşik Devletleri'ndeki
-       altyapısında işlenebilir. Ayrıntı: <a href="https://unity.com/legal/privacy-policy">Unity Gizlilik Politikası</a>.</p>
+    <p>Hizmet sağlayıcılarımız:</p>
+    <ul>
+      <li><b>Unity Technologies (Unity Gaming Services):</b> hesaplar, bulut kaydı ve sunucu. Veriler Unity'nin Avrupa Birliği ve Amerika Birleşik Devletleri'ndeki
+          altyapısında işlenebilir. Ayrıntı: <a href="https://unity.com/legal/privacy-policy">Unity Gizlilik Politikası</a>.</li>
+      <li><b>TelemetryDeck GmbH (Almanya):</b> anonim kullanım ölçümü. Ayrıntı: <a href="https://telemetrydeck.com/privacy/">TelemetryDeck Gizlilik</a>.</li>
+      <li><b>Meta Platforms Ireland / Meta Platforms, Inc.:</b> reklam ölçümü; veriler ABD'ye aktarılabilir. Ayrıntı: <a href="https://www.facebook.com/privacy/policy/">Meta Gizlilik Politikası</a>.</li>
+      <li><b>RevenueCat:</b> satın alma kayıtlarının işlenmesi.</li>
+      <li><b>Apple:</b> satın almaların işlenmesi (App Store) ve isteğe bağlı Game Center girişi.</li>
+    </ul>
 
     <h2>Saklama süresi ve silme</h2>
-    <p>Oyun verileriniz hesabınız etkin olduğu sürece saklanır. Verilerinizin silinmesini istediğinizde Profil &gt; Destek bölümündeki
-       oyuncu kimliğinizle birlikte <a href="mailto:rotastudiogames@gmail.com">rotastudiogames@gmail.com</a> adresine yazın; hesabınız ve
+    <p>Oyun verileriniz hesabınız etkin olduğu sürece saklanır. Hesabınızı oyunda silebilirsiniz: Ayarlar (dişli) &gt; Hesap &gt; &quot;Hesabımı sil&quot;
+       (iki adımlı onay). Bu işlem şirketinizi, mülklerinizi, nakdinizi ve bulut kaydınızı siler. Alternatif olarak Ayarlar (dişli) &gt; Destek ve hakkında bölümündeki
+       oyuncu kimliğinizle birlikte <a href="mailto:rotastudiogames@gmail.com">rotastudiogames@gmail.com</a> adresine yazabilirsiniz; hesabınız ve
        ilişkili veriler 30 gün içinde silinir. Herkese açık sıralamalardaki eski kayıtlar da kaldırılır.</p>
 
     <h2>Haklarınız</h2>
     <p>KVKK ve GDPR kapsamında verilerinize erişme, düzeltme, silme, işlemeye itiraz etme ve verilerinizi taşıma hakkınız vardır.
-       Talepleriniz için yukarıdaki adrese yazabilirsiniz. Ayrıca bulunduğunuz ülkenin veri koruma kurumuna başvurabilirsiniz.</p>
+       Talepleriniz için yukarıdaki adrese yazabilirsiniz. Ayrıca bulunduğunuz ülkenin veri koruma kurumuna başvurabilirsiniz.
+       TelemetryDeck verisi kimliğinizle eşleştirilemediği için kişiye özel silinemez; ölçümü kapatmak cihazdaki kimliği siler.
+       Meta'ya giden veriye itiraz etmek için &quot;Reklam ölçümü&quot; satırını kapatabilirsiniz.</p>
 
     <h2>Çocuklar</h2>
     <p>Skyline Empire 13 yaşından küçük çocuklara yönelik değildir ve bilerek onlardan veri toplamaz. Böyle bir durumu fark ederseniz
@@ -84,7 +106,7 @@
        This page explains what data is processed, why, and your rights. We do not ask for your name, email address or phone number.</p>
 
     <h2>Account and game data</h2>
-    <p>On first launch the game creates an anonymous player ID for you (Unity Authentication). With this ID the following is stored on the
+    <p>The game automatically creates an anonymous account and player ID for you, without any action on your part (Unity Authentication). With this ID the following is stored on the
        server (Unity Cloud Save and Unity Cloud Code):</p>
     <ul>
       <li><b>Game progress:</b> in-game money, properties, buildings and their designs, level, quests, club membership and in-game transactions.</li>
@@ -93,34 +115,56 @@
       <li><b>Leaderboards:</b> your company name and scores (such as net worth and number of properties) appear on public leaderboards (Unity Leaderboards).</li>
     </ul>
     <p>This data is necessary to run the game (performance of a contract). Part of the map and your settings are also cached on your device for speed.</p>
+    <p>If you wish, you can optionally link your account to your Apple Game Center account to protect your progress. If you do, your Game Center
+       player identifier is stored with your account.</p>
 
-    <h2>Usage measurement (optional)</h2>
-    <p>Only if you consent, anonymous usage events are collected to improve the game (Unity Analytics): session length, which steps were
-       reached, and technical information such as device model and OS version. You can accept or decline on first launch and change your
-       choice later under Profile &gt; Privacy. If you decline, nothing is measured.</p>
+    <h2>Usage measurement and ad measurement</h2>
+    <p><b>Anonymous usage measurement (TelemetryDeck):</b> on by default. To improve the game, coarse events are sent: session length (as a range),
+       screens opened, tutorial steps, progress milestones, the steps of the purchase flow and the short product name, error type, device model,
+       OS version, app version and the device's region setting. Data is sent under a hash of a random ID generated on your device; no names,
+       player ID, advertising identifier or location are sent. Your IP address is not stored on TelemetryDeck's servers. To switch it off, use
+       Settings (gear) &gt; Privacy &gt; &quot;Anonymous usage data&quot; in the game; switching it off deletes the random ID on your device.</p>
+    <p><b>Ad measurement (Meta):</b> to measure whether our own advertising works, app install, app launch and purchase events (product, price,
+       currency) together with device and app information are shared with Meta Platforms. The advertising identifier (IDFA) is not accessed and the game
+       shows no tracking prompt. It is on by default outside the European Economic Area, the United Kingdom and Switzerland; in those regions it is off until you switch it on.
+       To switch it off (or on, in those regions), use Settings (gear) &gt; Privacy &gt; &quot;Ad measurement&quot;.</p>
+    <p><b>Detailed game analytics (Unity Analytics):</b> off by default; anonymous usage events are collected only if you switch it on under
+       Settings (gear) &gt; Privacy &gt; &quot;Detailed game analytics&quot;.</p>
 
     <h2>In-app purchases</h2>
     <p>Purchases are processed by Apple (App Store). We never see your card or payment details. To credit your purchase to your account,
-       only the transaction ID and product information are verified and stored on our server.</p>
+       only the transaction ID and product information are verified and stored on our server. Purchase records are also processed through RevenueCat so
+       that your purchase can be delivered. If ad measurement is on, the purchase event is also sent to Meta (see above).</p>
 
     <h2>Advertising and tracking</h2>
-    <p>The game currently shows no ads. The app does not track you across other apps or websites and does not request App Tracking Transparency permission.</p>
+    <p>The game shows no ads. The app does not ask for App Tracking Transparency permission and does not access your advertising identifier (IDFA).
+       For ad measurement, see &quot;Usage measurement and ad measurement&quot; above.</p>
 
     <h2>Notifications</h2>
     <p>If you allow it, reminders (for example when a construction finishes or your rent box is full) are scheduled on your device. No data is sent to a server for this.</p>
 
     <h2>Service providers and data location</h2>
-    <p>Server services are provided by Unity Technologies (Unity Gaming Services). Data may be processed on Unity's infrastructure in the
-       European Union and the United States. Details: <a href="https://unity.com/legal/privacy-policy">Unity Privacy Policy</a>.</p>
+    <p>Our service providers:</p>
+    <ul>
+      <li><b>Unity Technologies (Unity Gaming Services):</b> accounts, cloud save and server. Data may be processed on Unity's infrastructure in the
+          European Union and the United States. Details: <a href="https://unity.com/legal/privacy-policy">Unity Privacy Policy</a>.</li>
+      <li><b>TelemetryDeck GmbH (Germany):</b> anonymous usage measurement. Details: <a href="https://telemetrydeck.com/privacy/">TelemetryDeck Privacy</a>.</li>
+      <li><b>Meta Platforms Ireland / Meta Platforms, Inc.:</b> ad measurement; data may be transferred to the United States. Details: <a href="https://www.facebook.com/privacy/policy/">Meta Privacy Policy</a>.</li>
+      <li><b>RevenueCat:</b> processing of purchase records.</li>
+      <li><b>Apple:</b> processing of purchases (App Store) and optional Game Center sign-in.</li>
+    </ul>
 
     <h2>Retention and deletion</h2>
-    <p>Your game data is kept while your account is active. To have your data deleted, email
-       <a href="mailto:rotastudiogames@gmail.com">rotastudiogames@gmail.com</a> with the player ID shown under Profile &gt; Support; your account and
+    <p>Your game data is kept while your account is active. You can delete your account in the game: Settings (gear) &gt; Account &gt; &quot;Delete my account&quot;
+       (two-step confirmation). This removes your company, properties, cash and cloud save. Alternatively, you can email
+       <a href="mailto:rotastudiogames@gmail.com">rotastudiogames@gmail.com</a> with the player ID shown under Settings (gear) &gt; Support and about; your account and
        related data will be deleted within 30 days, including your entries on public leaderboards.</p>
 
     <h2>Your rights</h2>
     <p>Under the GDPR and Turkish data protection law (KVKK) you have the right to access, correct, delete and port your data and to object
-       to processing. Write to the address above for any request. You may also contact the data protection authority in your country.</p>
+       to processing. Write to the address above for any request. You may also contact the data protection authority in your country.
+       TelemetryDeck data cannot be matched to your identity and therefore cannot be deleted individually; switching measurement off deletes the ID on your device.
+       To object to data going to Meta, switch off the &quot;Ad measurement&quot; row.</p>
 
     <h2>Children</h2>
     <p>Skyline Empire is not directed at children under 13 and does not knowingly collect their data. If you become aware of such a case,
@@ -134,7 +178,7 @@
     <h2>Destek / Support</h2>
     <p>Sorular, hata bildirimleri ve veri talepleri için / For questions, bug reports and data requests:
        <a href="mailto:rotastudiogames@gmail.com">rotastudiogames@gmail.com</a></p>
-    <p>Lütfen e-postanıza Profil &gt; Destek bölümündeki oyuncu kimliğinizi ekleyin. / Please include the player ID shown under Profile &gt; Support.</p>
+    <p>Lütfen e-postanıza Ayarlar (dişli) &gt; Destek ve hakkında bölümündeki oyuncu kimliğinizi ekleyin. / Please include the player ID shown under Settings (gear) &gt; Support and about.</p>
   </section>
 </main>
 </body>
